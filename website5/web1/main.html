@@ -1,0 +1,179 @@
+<html>
+	<head>
+		<title>Andreas-sujono.com</title>
+	</head>
+	<link rel="stylesheet" href="style.css"/>
+
+	
+	<script>
+			var imagecount =1;
+			var total= 4;
+
+			function slide(x){
+				var image = document.getElementById('img');
+
+				imagecount = imagecount+x;
+				if(imagecount > total){imagecount =1;}
+
+				if(imagecount< 1){imagecount = total;}
+				image.src= "img1."+ imagecount+".jpg";
+			}
+
+			function slidea(){
+				setInterval(function(){
+				var image = document.getElementById('img1');
+
+				imagecount = imagecount+1;
+				if(imagecount > total){imagecount =1;}
+
+				if(imagecount< 1){imagecount = total;}
+				image.src= "img"+ imagecount+".jpg";
+			},4000);
+			}
+
+			function toggleCP(){
+			var cp = document.getElementById("cp");
+			cp.style.height = window.innerHeight - 60+"px";
+			if(cp.style.right == "0px"){
+				cp.style.right = "-260px";
+			} else {
+				cp.style.right = "0px";
+			}
+		}
+
+			function toggleMenu(menu){
+			var menu = document.getElementById("menu1");
+			if(menu.dataset.opened == "no"){
+			    menu.style.transform = "perspective(800px) rotateX(0deg)";
+				menu.dataset.opened = "yes";
+				return false;
+			} else {
+				menu.style.transform = "perspective(800px) rotateX(90deg)";
+				menu.dataset.opened = "no";
+			}
+		}
+
+		    var scrollY = 0;
+		    var distance = 40;
+		    var speed = 24;
+		    function autoScrollTo(el) {
+		      var currentY = window.pageYOffset;
+		      var targetY = document.getElementById(el).offsetTop;
+		      var bodyHeight = document.body.offsetHeight;
+		      var yPos = currentY + window.innerHeight;
+		      var animator = setTimeout('autoScrollTo(\''+el+'\')',24);
+		      if(yPos > bodyHeight){
+		        clearTimeout(animator);
+		      } else {
+		        if(currentY < targetY-distance){
+		            scrollY = currentY+distance;
+		            window.scroll(0, scrollY);
+		          } else {
+		            clearTimeout(animator);
+		          }
+		      }
+		    }
+		    function resetScroller(el){
+		      var currentY = window.pageYOffset;
+		        var targetY = document.getElementById(el).offsetTop;
+		      var animator = setTimeout('resetScroller(\''+el+'\')',speed);
+		      if(currentY > targetY){
+		        scrollY = currentY-distance;
+		        window.scroll(0, scrollY);
+		      } else {
+		        clearTimeout(animator);
+		      }
+		    }
+	</script>
+
+	<body onLoad="slidea()">
+
+		<div class="final_header" id="begin">
+			<img src="img.jpg." id="img1"/>
+
+				<div class="header">
+					<div class="logo">
+						<h1>A</h1>
+					</div>
+
+					<div class="Logo_andreas">
+						<h1> ndreas-sujono </h1>
+					</div>
+
+				<div class="begin" >
+					<h2><center><a href="#" onclick="return false;" onmousedown="autoScrollTo('topbar');"> Let's Begin </h2></center></a>
+					<hr width="160px" align="center" color="black"/>  
+				</div>
+				</div>
+		</div>
+
+		<div id="cpBtn" onclick="toggleCP()">
+		  <div></div>
+		  <div></div>
+		  <div></div>
+		</div>
+
+		<div id="cp">
+			<details >
+				<summary>Home</summary>
+			</details>
+			<details>
+				<summary>About Me </summary>
+			</details>
+			<details>
+				<summary>Other Website</summary>
+				<a href="#"> Web1 </a>
+				<a href="#"> Web2 </a>
+				<a href="#"> Web3</a>
+				<a href="#"> Web4</a>
+				<a href="#"> Web5</a>
+			</details>
+			<details>
+				<summary>Contact Me </summary>
+			</details>
+		</div>
+
+		<div id="topbar">
+		  <button id="menu1btn" onclick="toggleMenu('menu1')">Menu</button>
+		</div>
+		<div class="topbar1">
+		</div>
+
+		<nav id="menu1" class="folding_menu" data-opened="no" style="position:absolute; ">
+		  <a href="#">Section A</a>
+		  <a href="#">Section B</a>
+		  <a href="#">Section C</a>
+		  <a href="#">Section D</a>
+		</nav>
+
+		<div id="container">
+			<img id="img" src="img1..jpg">
+			<div id="left_holder" ><img OnClick="slide(-1)" class="left" src="arrow_left.png"></div>
+			<div id="right_holder" ><img OnClick="slide(1)" class="right"  src="arrow_right.png "></div>
+		</div>
+
+		<div class="content1">
+			<aside>
+				<p><h1>sidebar</h1></p>
+				News..........
+			</aside>
+
+			<div class="maincontent">
+				<nav><h1>BOX</h1></nav>
+				<div class="box">
+					<div class="box_backdrop"><nav>Hello Everyone</nav></div>
+					<div class="box_shadow"> </div>
+				</div>
+
+				<nav><a href="#" onclick="return false;" onmousedown="resetScroller('begin');">back to top</nav></a>
+			</div>
+
+			<aside>
+				<p><h1>sidebar</h1></p>
+				News..........
+			</aside>
+		</div>
+
+
+	</body>
+</html>

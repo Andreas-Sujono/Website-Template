@@ -1,0 +1,30 @@
+body{ background:#5F5A5A;margin: 0px auto;}
+
+.backhead{background:url(view1.jpg); width: 100%; height: 70px; margin:0px; opacity: 2;}
+.header{ background-color: #E3E3E3;opacity: 0.9; width: 100%; height: 70px; margin: 0 auto;}
+.header h1{float: left; font-size: 40px; font-family: sans-serif; letter-spacing: 4px; text-shadow:2px 6px 0 white; opacity:0.9 ; margin-top: 10px; margin-left: 10px;}
+
+.nav{float: right; top:5px;}
+.nav ul{margin-top: 20px;}
+.nav ul li{float: left; margin-left: 25px; }
+.nav ul li a{font-family: sans-serif; font-size: 20px; text-decoration: none; color: black; opacity: 0.9;}
+.nav ul li a:hover{text-decoration: underline; color: white;}
+
+img {width: 1193px; height: 400px; margin:auto; border: 3px white solid;}
+
+.content1{background: white; width: 100%; height: 80px; position: relative; top: -30px;}
+.content1 h1{text-align: center; font-size: 50px; font-family: sans-serif; color: #716969; }
+
+.image2{width: 1193px; height: 400px; margin: 0;position: relative; top: -30px;}
+
+.content2{background: white; width: 100%; height: 80px;position: relative; top: -30px;}
+.content2 h1{text-align: center; font-size: 50px; font-family: sans-serif; color: #716969; margin-top: 0; }
+
+.contact { border: 2px white solid; width: 90%; height: 300px; margin: 10 10; background-color: #D8D3D3; text-align: center; margin-left: 60px;}
+
+.image3{ float: left;width:494px; height: 471px; border: 0px; }
+.content3 h2{float: right; width: 670px;}
+.content3 {background-color: #D8D3D3;width: 700px; float: right;height: 500px; }
+.content3 h1{text-align: center; font-size: 45px;}
+
+.all{background-color: #9B9292;width: 1200px; margin: auto;}

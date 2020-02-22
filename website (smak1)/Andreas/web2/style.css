@@ -1,0 +1,147 @@
+body{
+	background-color:#C5C5BE;
+	margin: 0;
+}
+
+
+.all{width: 80%; margin-left: 150px;}
+.header{
+	background:#484845;
+	width: 100%;
+	height: 70px;
+	margin: 0 auto;
+}
+.header h1{
+	font-size: 35px;
+	text-shadow:4px -2px 0 red;
+	letter-spacing: 10px;
+	font-family: sans-serif;
+	color: white;
+	float: left;
+	margin: 15;
+
+}
+.nav{
+	float: right;
+
+}
+.nav ul {
+	margin: 20;
+}
+.nav ul li{
+	float: left;
+	margin-left: 20px;
+}
+.nav ul li a{
+	font-size:20px;
+	font-family: sans-serif;
+	text-decoration: none;
+	color: white;
+}
+.nav ul li a:hover{
+	text-decoration: underline;
+}
+
+.images{
+	margin: 0px;
+	background:url(view1.jpg);
+	width: 100%;
+	height: 350px;
+}
+.cimages{
+	position: relative;
+	top: 10px;
+}
+article {
+	width: 600px;
+	height:180px;
+	margin:  auto;
+	background-color:white;
+	opacity:0.5;
+	color: black;
+	font-size: 19px;
+	font-family: sans-serif;
+}
+.images .head a{
+	font-size: 30px;
+	background-color: pink;
+	width: 700px;
+	height:45px;
+	text-decoration: none;
+	color: black;
+}
+.images .head{
+	background-color: pink;
+	width: 700px;
+	margin: auto;
+	text-align: center;
+}
+
+
+.content1{
+	margin-top: 0px;
+	background-color: white;
+	width: 100%;
+	height: 70px;
+}
+.content1 {
+	text-align: center;
+	font-size: 30px;
+	float: left;
+	line-height: 70px;
+}
+
+
+.aside1,.aside2{
+	float: right;
+	border:2px black solid;
+	margin-left:-60px;
+	margin-top: 5px;
+	margin-right: 80px;
+	line-height: 50px;
+
+}
+aside a{
+	text-decoration: none;
+	color: black;
+}
+
+
+.maincontent{
+	font-size: 15px;
+	text-align: center;
+}
+.content2{
+	float: left;
+	width: 60%;
+	height: 500px;
+	background-color: #B7E4E4;
+}
+
+ .aside3{
+	float: left;
+	width: 20%;
+	height: 500px;
+	background-color: #D5EEEE;
+}
+
+.aside4{
+	float: left;
+	width: 20%;
+	height: 500px;
+	background-color: #D5EEEE;
+}
+
+
+.footer{
+	background:url(space.jpg);
+	width: 100%;
+	height: 400px;
+	color: white;
+	margin-top: 500px;
+}
+.footer h2{
+	float: right;
+	position: relative;
+	top: 170px;
+}

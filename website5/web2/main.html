@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<title>rulnbutt.com</title>
+	</head>
+
+	<link rel="stylesheet" href="style.css"/>
+
+
+		<script type="text/javascript">
+
+			var imagecount =1;
+			var total= 5;
+
+			function slide(x){
+				var image = document.getElementById('img');
+
+				imagecount = imagecount+x;
+				if(imagecount > total){imagecount =1;}
+
+				if(imagecount< 1){imagecount = total;}
+				image.src= "img"+ imagecount+".jpg";
+			}
+
+			function slidea(){
+				setInterval(function(){
+				var image = document.getElementById('img');
+
+				imagecount = imagecount+1;
+				if(imagecount > total){imagecount =1;}
+
+				if(imagecount< 1){imagecount = total;}
+				image.src= "img"+ imagecount+".jpg";
+			},2000);
+			}
+
+		</script>
+
+	<body onLoad="slidea()">
+
+		<div class="backheader">
+			<div class="header">
+				<div class="logo">
+					<img src="butt.jpg"/>
+					<nav>RULNBUTT</nav>
+				</div>
+
+					<div class="search1">
+						<form method="get" class="search" name="search">
+							<textarea name="search" placeholder="search"></textarea>
+							<input type="submit" value="search">
+						</form>
+					</div> 
+			</div>
+		</div>
+
+		<div class="backnav1">
+			<div class="nav1">
+				<ul>
+					<li><a href="#"> Home </a></li>
+					<li><a href="#"> About me </a></li>
+					<li><a href="#"> Contact </a></li>
+					<li><a href="#"> Other website </a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="banner1">
+			<img id="img" src="img.jpg">
+			<div id="left_holder" ><img OnClick="slide(-1)" class="left" src="arrow_left.png"></div>
+			<div id="right_holder" ><img OnClick="slide(1)" class="right"  src="arrow_right.png "></div>
+		</div>
+
+		<div class="backcontent1">
+			<div class="content1">
+				This Is The Main Headings
+			</div>
+
+		</div>
+
+		<div class="divider1">
+		</div>
+
+		<div class="backcontent2">
+			<div class="content2">
+				This Is The Main Headings2
+			</div>
+
+			<aside>
+				This Is The Sidebar
+			</aside>
+		</div>
+
+		<div class="backfooter">
+			<div class="footer">
+				<nav>Footer Goes Here</nav>
+			</div>
+		</div>
+
+
+
+	</body>
+</html>

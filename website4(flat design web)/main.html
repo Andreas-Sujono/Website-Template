@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<em><title>Flat-Design-Website</title></em>
+	</head>
+
+	<script type="text/javascript">
+			var scrollY = 0;
+		    var distance = 40;
+		    var speed = 24;
+		    function autoScrollTo(el) {
+		      var currentY = window.pageYOffset;
+		      var targetY = document.getElementById(el).offsetTop;
+		      var bodyHeight = document.body.offsetHeight;
+		      var yPos = currentY + window.innerHeight;
+		      var animator = setTimeout('autoScrollTo(\''+el+'\')',24);
+		      if(yPos > bodyHeight){
+		        clearTimeout(animator);
+		      } else {
+		        if(currentY < targetY-distance){
+		            scrollY = currentY+distance;
+		            window.scroll(0, scrollY);
+		          } else {
+		            clearTimeout(animator);
+		          }
+		      }
+		    }
+		    function resetScroller(el){
+		      var currentY = window.pageYOffset;
+		        var targetY = document.getElementById(el).offsetTop;
+		      var animator = setTimeout('resetScroller(\''+el+'\')',speed);
+		      if(currentY > targetY){
+		        scrollY = currentY-distance;
+		        window.scroll(0, scrollY);
+		      } else {
+		        clearTimeout(animator);
+		      }
+		    }
+
+		    function comingsoon(){
+		    	var targetx = document.getElementById(box)
+
+		    	if(targetx.visibilty = visible){targetx.visibilty=hidden;}
+		    }
+
+	</script>
+
+	<link rel="stylesheet" href="style.css"/>
+
+	<body>
+		<div class="header">
+			<h1>Andreas-Sujono</h1>
+
+			<div class="nav">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About me</a></li>
+					<li><a href="#">Other website</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="content1">
+			<div class="content11">
+					<p>Hello World</p>
+				
+					SHARE THE CREATIVE PROJECTS YOU ALWAYS WANTED TO FINISH
+			</div>
+
+			<div class="box" id="box" OnClick="comingsoon()">
+			<div class="box1">
+				<P><a href="#" Onmousedown="autoScrollTo('nothing')"> Click Here </a></p>
+			</div>
+				<div class="box2">
+					</div>
+				<div class="box3">
+					</div>
+			</div>
+		</div>
+ 
+		<div class="divider">
+		</div>
+
+		<div class="content2">
+			<p>WESBITE THAT I MAKED</p>
+				<table class="gallery" id="gallery">
+					<td>
+						<tr><img src="web1(gallery).jpg"/><tr>
+						<tr><img src="web2(gallery).jpg"/><tr>
+					</td>
+					<td>
+						<tr><img src="web4(gallery).jpg"/><tr>
+						<tr><img src="web5(gallery).jpg"/><tr>
+						<tr><img src="web3(gallery).jpg"/><tr>
+					</td>
+				</table>
+		</div>
+
+		<div Class="nothing" id="nothing">
+			;
+		</div>
+
+	</body>
+</html>

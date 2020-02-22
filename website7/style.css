@@ -1,0 +1,93 @@
+body{margin: 0 auto;min-width: 80%;}
+
+.final_header{position: relative;}
+.final_header .img1{width: 100%;height: 500px;-webkit-filter:blur(2px) grayscale(0.4);min-width: 1400px;min-height: 400px;}
+.final_header .img1{  -webkit-transition: opacity 1s ease-in-out;
+					  -moz-transition: opacity 1s ease-in-out;
+					  -o-transition: opacity 1s ease-in-out;
+					  transition: opacity 1s ease-in-out;}
+
+.final_header .header{position: absolute;top: 0px;cursor: pointer;}
+.final_header .logo{font-size: 80px; text-shadow:5px -2px 0 white;text-shadow:7px -3px 0 red;position: relative;left: 40px;top: -130px;font-family: cursive;}
+
+.final_header .logo_andreas{font-size: 35px;text-shadow:3px -2px 0 white;position: relative;top: -380px; left: 164px;}
+.final_header .logo_andreas a{font-size: 25px;}
+
+.final_header .backquote{background-color: #D8D8CC; opacity: 0.7;text-align: center;float: right;width: 100%; height: 200px;position: relative; top: -310px;left: 180%;}
+.final_header .quote{color:#000;position: absolute;left:;font-size: 15px; cursor: pointer; font-family: cursive;}
+.final_header .quote nav{float: right; font-size: 15px; font-family: sans-serif;position: absolute;top:160px;}
+
+
+#cpBtn{position: fixed;right: 20px;width: 20px;height: 24px;background: linear-gradient(#FFF,#DDD);border: #AAA 1px solid;
+		border-radius: 2px;padding: 2px 5px;cursor: pointer;transition: border 0.3s linear 0s;top:30px;}
+#cpBtn:hover{border: #06F 1px solid;}
+#cpBtn:hover div{background: #06F;}
+#cpBtn > div{width: 20px;height: 4px;background: #333;margin: 3px 0px;border-radius: 4px;transition: background 0.3s linear 0s;}
+#cp{position: fixed;right: -260px;top: 60px;width: 350px;height: 0px;background: #333;transition: right 0.3s linear 0s;}
+
+#cp{width: 15%;}
+
+#cp summary{background-color: #dfefff; margin: 8px; padding: 8px;}
+#cp summary a{font-size: 15px;}
+#cp details{margin-left: 10px;}
+#cp details a{background: #EFEFEF; font-size: 20px; color: #000; display: block; margin: 5px; padding: 4px;text-align: center; -left: 10px;}
+#cp summary:hover{background-color: #6D5BC9; cursor: pointer; }
+
+#topbar { background: #867777; height: 70px;position: relative;width: 85%;}
+.topbar1{background: #867777; height: 70px;margin-top: -70px;}
+#menu1btn { float:left; margin:15px 0px 0px 20px; padding: 10px; cursor: pointer;}
+#menu1 {
+	position: absolute;
+	left: 20px;
+	background: #fff;
+	width: 140px;
+	height: auto;
+	padding: 0px 2px 2px 2px;
+	z-index: 10;
+	transform-origin: 50% 0%;
+	transform: perspective(800px) rotateX(90deg);
+	transition: transform .3s linear 0s;
+	cursor: pointer;
+}
+#menu1 > a {
+	display: block;
+	text-decoration: none;
+	color: #FFF;
+	background:#666;
+	padding: 12px 0px 12px 12px;
+	margin: 1px;
+	font-family: Arial;
+	font-size: 13px;
+	transition: background 0.2s linear 0s, color 0.2s linear 0s;
+}
+#menu1 > a:hover { background:#888; color:#FFF; }
+
+
+.content1{width: 100%; height: 400px;margin: 20px auto;font-size: 22px;}
+aside{float: left;width: 19%;text-align: center;border: 1px black dashed;height: 300px; font-size: 20px;}
+.maincontent{float: left;width: 60%;text-align: center;position: relative;height: 600px;}
+.maincontent nav{font-size: 27px;}
+.maincontent nav a{text-decoration: underline;color: black;float: right; font-size: 25px;position: relative;top: 70px;margin-right: 20px;}
+
+.box{margin: 0px auto; width: 285px; height: 300px;position: relative;}
+.box_backdrop{background-color: #4F35D0; width: 285px; height: 250px; margin: 0 auto;position: relative;top: 0;font-size: 30px;text-align: center;
+-webkit-animation:float 2s infinite ease-in-out;
+-moz-animation:float 2s infinite ease-in-out;
+-ms-animation:float 2s infinite ease-in-out;
+-o-animation:float 2s infinite ease-in-out;
+animation:float 2s infinite ease-in-out;}
+
+.box_backdrop nav{font-size: 40px; text-align: center;position: relative;top:100px;color: white;}
+
+.box_shadow{position: relative; height: 16px; width:300px;background: #999; opacity: 0.7; border-radius: 100%; margin: 0 0 0 0; top: 150px;
+-webkit-animation:react 2s infinite ease-in-out;
+-moz-animation:react 2s infinite ease-in-out;
+-ms-animation:react 2s infinite ease-in-out;
+-o-animation:react 2s infinite ease-in-out;
+animation:react 2s infinite ease-in-out;}
+
+@-webkit-keyframes float{50% {top: 100px;} 100% {top: 0px;}}
+@-webkit-keyframes react{50% {margin: 0 40% 0 20%; opacity: 0.95;} 100% {margin: 0 0 0 0; opacity: 0.7;}}
+
+
+.img2{width: 100%; height: 500px;}

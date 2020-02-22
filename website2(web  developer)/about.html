@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<title>Andreas-sujono.com</title>
+	</head>
+
+		<link rel="stylesheet" href="style.css"/>
+
+		
+  <style type="text/css">
+    #myslider {
+    opacity:1;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+    transition: opacity 1s;        /* Image become more bright for about 1s, smooth transition*/
+    }
+    #myslider.fadeOut {
+    opacity:0;                          /* image is Transparent */
+    filter: alpha(opacity=0);   /* For IE8 and earlier */
+    }
+  </style>
+
+<script type="text/javascript">
+window.onload=function()
+{
+var ListImages =
+    [                                /* Change images if downloaded from below */
+    'opening.jpg',               /* Change here: to day.jpg              */
+    'web2.jpg',             /* Change here: to monday.jpg       */
+    'websmak1.jpg',           /* Change here: to tuesday.jpg        */
+             /* Change here: to wednesday.jpg  */
+    ],
+    startimage = 0;
+    Duration = 3000;
+
+function slideShow() {
+    document.getElementById('myslider').className += "fadeOut";
+    setTimeout(function()
+    {
+        document.getElementById('myslider').src = ListImages[startimage];
+        document.getElementById('myslider').className = "";
+    },1000);
+    startimage=startimage + 1;
+    if (startimage == ListImages.length)
+    {
+    startimage = 0;
+    }
+    setTimeout(slideShow,Duration);
+    }
+   slideShow();
+   }
+</script>
+
+	<body onLoad="alert('REFRESHED')" onUnload="alert('Good Bye')">
+    <div class="all">
+		<div class="backhead">
+
+			<div class="header">
+				<h1> Andreas-Sujono </h1>
+				
+				<div class="nav">
+					<ul>
+
+						<li><a href="main.html">HOME </a></li>
+						<li><a href="about.html">ABOUT ME </a></li>
+						<li><a href="contact.html">CONTACT </a></li>
+
+					</ul>	
+				</div>
+			</div>
+		</div>
+
+       <img src="webdev.jpg" class="image2"/>
+
+
+
+       <img src="animation.jpg" class="image3"/>
+
+       <div class="content3">
+       <h2><p>Hi, My name is Andreas Sujono. of course you know me from the header in this website. </p>
+        <p> I am Web Developer , you can see the website that I maked in the Main website. Just <a href="main.html"> click here </a>.</p>
+        <p> if you want to know me more ,just follow my social media in <a href="contact.html">Here </a></p>
+        </h2>
+        <h1> IF YOU HAVE BUSINESS OR SOMETHING , I CAN HELP YOU TO MAKE THE WEBSITE </h1>
+         </div>
+    </div>
+
+
+
+	</body>
+</html>

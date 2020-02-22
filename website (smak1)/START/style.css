@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+html,
+body {
+	height: 100%;
+}
+/* ---- HEADER ---- */
+@media (min-width: 768px) {
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu>li {
+    display: table-cell;
+}
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+	background-color:#353535;
+}
+.navbar {
+  text-align: center;
+	
+}
+.navbar li:hover {
+	background-color:blue;
+	transition: background-color 0.3s;
+}
+}
+#header {
+	background:url('../images/banner.jpg');
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center;
+	height:400px;
+	text-align:center;
+}
+#wrap {
+  min-height: 100%;
+  height: auto;
+  margin-bottom: -90px;
+  padding-bottom: 90px;
+}
+.centerer {
+	display:inline-block;
+	height:100%;
+	vertical-align:middle;
+}
+#banner-text {
+	display:inline-block;
+	vertical-align:middle;
+	height:40%;
+}
+
+/* ---- END OF HEADER STYLING ---- */
+/* css untuk footer */
+#footer {
+	color:white;
+	height:90px;
+	background-color:#222222;
+
+}
+#footlink {
+	text-align:center;
+}
+@media screen and (min-width:768px){
+#footlink {
+	text-align:left;
+}
+}
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+/* akhir dari footer... Yay */
+/* fix untuk banner */
+#plang{
+	width:80%;
+}
+@media screen and (min-width:700px){
+#plang{
+	width:50%;
+}
+}
+@media screen and (min-width:1300px){
+#plang{
+	width:650px;
+}
+}
+.center-align {
+    display: flex;
+    align-items: center;
+	justify-content: center;
+}
+/* akhir dari fub */

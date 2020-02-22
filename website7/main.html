@@ -1,0 +1,177 @@
+<html>
+	<meta charset="utf-8">
+	<head>
+		<title>Andreas-sujono.com</title>
+	</head>
+	<link rel="stylesheet" href="style.css"/>
+
+	
+	<script>
+			var imagecount =1;
+			var total= 4;
+
+			function slide(x){
+				var image = document.getElementById('img');
+
+				imagecount = imagecount+x;
+				if(imagecount > total){imagecount =1;}
+
+				if(imagecount< 1){imagecount = total;}
+				image.src= "img1."+ imagecount+".jpg";
+			}
+
+			function slidea(){
+				setInterval(function(){
+				var image = document.getElementById('img1');
+
+				imagecount = imagecount+1;
+				if(imagecount > total){imagecount =1;}
+
+				if(imagecount< 1){imagecount = total;}
+				image.src= "img"+ imagecount+".jpg";
+			},4000);
+			}
+
+			function toggleCP(){
+			var cp = document.getElementById("cp");
+			cp.style.height = window.innerHeight - 60+"px";
+			if(cp.style.right == "0px"){
+				cp.style.right = "-260px";
+			} else {
+				cp.style.right = "0px";
+			}
+		}
+
+			function toggleMenu(menu){
+			var menu = document.getElementById("menu1");
+			if(menu.dataset.opened == "no"){
+			    menu.style.transform = "perspective(800px) rotateX(0deg)";
+				menu.dataset.opened = "yes";
+				return false;
+			} else {
+				menu.style.transform = "perspective(800px) rotateX(90deg)";
+				menu.dataset.opened = "no";
+			}
+		}
+
+		    var scrollY = 0;
+		    var distance = 40;
+		    var speed = 24;
+		    function autoScrollTo(el) {
+		      var currentY = window.pageYOffset;
+		      var targetY = document.getElementById(el).offsetTop;
+		      var bodyHeight = document.body.offsetHeight;
+		      var yPos = currentY + window.innerHeight;
+		      var animator = setTimeout('autoScrollTo(\''+el+'\')',24);
+		      if(yPos > bodyHeight){
+		        clearTimeout(animator);
+		      } else {
+		        if(currentY < targetY-distance){
+		            scrollY = currentY+distance;
+		            window.scroll(0, scrollY);
+		          } else {
+		            clearTimeout(animator);
+		          }
+		      }
+		    }
+		    function resetScroller(el){
+		      var currentY = window.pageYOffset;
+		        var targetY = document.getElementById(el).offsetTop;
+		      var animator = setTimeout('resetScroller(\''+el+'\')',speed);
+		      if(currentY > targetY){
+		        scrollY = currentY-distance;
+		        window.scroll(0, scrollY);
+		      } else {
+		        clearTimeout(animator);
+		      }
+		    }
+	</script>
+
+	<body onLoad="slidea()">
+
+		<div class="final_header" id="begin">
+			<img src="img.jpg." id="img1" class="img1" />
+
+				<div class="header">
+					<div class="logo">
+						<h1>A</h1>
+					</div>
+
+					<div class="Logo_andreas">
+						<h1> ndreas-sujono<a>.com</a> </h1>
+					</div>
+
+					<div class="backquote">
+						<div class="quote" >
+							<blockquote><h1>"Technology is a word that describes something that doesn't work yet"<nav>-Douglas Adams</nav></h1></blockquote>
+						</div>
+					</div>
+				</div>
+		</div>
+
+		<div id="cpBtn" onclick="toggleCP()">
+		  <div></div>
+		  <div></div>
+		  <div></div>
+		</div>
+
+		<div id="cp">
+			<details >
+				<summary>Home</summary>
+			</details>
+			<details>
+				<summary>About Me </summary>
+			</details>
+			<details>
+				<summary>Other Website</summary>
+			  <a href="#" style="text-decoration:none;">Coming soon!!</a>
+			  <a href="#" style="text-decoration:none;">Coming soon!!</a>
+			  <a href="#" style="text-decoration:none;">Coming soon!!</a>
+			  <a href="#" style="text-decoration:none;">Coming soon!!</a>
+			</details>
+			<details>
+				<summary>Contact Me </summary>
+			</details>
+		</div>
+
+		<div id="topbar">
+		  <button id="menu1btn" onclick="toggleMenu('menu1')">Menu</button>
+		</div>
+		<div class="topbar1">
+		</div>
+
+		<nav id="menu1" class="folding_menu" data-opened="no" style="position:absolute; ">
+		  <a href="#">Coming soon!!</a>
+		  <a href="#">Coming soon!!</a>
+		  <a href="#">Coming soon!!</a>
+		  <a href="#">Coming soon!!</a>
+		</nav>
+
+		<div class="content1">
+			<aside>
+				<p><h1>Ads</h1></p>
+				Want add some ads ,contact me!!!!!
+			</aside>
+
+			<div class="maincontent">
+				<div id="whoami">
+					<nav><h1>Who I Am??????</h1></nav>
+
+					<nav><a href="#" onclick="return false;" onmousedown="resetScroller('begin');">back to top</nav></a>
+				</div>
+
+				<div id="contact">
+				</div>
+			</div>
+
+			<aside>
+				<p><h1>Ads</h1></p>
+				Want add some ads ,contact me!!!!!
+			</aside>
+		</div>
+
+		<img src="img1.jpg" class="img2">
+
+
+	</body>
+</html>

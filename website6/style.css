@@ -1,0 +1,11 @@
+body{margin: auto;min-width: 100%;}
+.banner{background: url(blur-banner2.jpg);width: 100%;height: 100%;margin: 0;min-width: 100%;}
+.text-banner{width: 350px;height: 63px;text-align: center;opacity: 0.6;}
+.text-banner p{font-size: 260%;font-weight: bold;font-style: italic;color:white;}
+
+.quote{position: absolute;top: 50%;}
+.quote p {font-size: 50px;color: #fff; font-style: italic;position:relative;top: 30px;left: 20%; }
+.quote span{font-size: 30px;color: #fff; font-style: italic;position:relative;left: 34%;}
+.quote hr{position: relative;left: 24%;}
+
+.img{position: absolute;left: 40%;top: 80%;}

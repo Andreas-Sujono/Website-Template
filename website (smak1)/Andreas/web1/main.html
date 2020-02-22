@@ -1,0 +1,141 @@
+<html>
+	<head>
+		<title>Smak1.bpkpenabur.or.id</title>
+	</head>
+
+	<link rel="stylesheet" href="style.css"/>
+
+	<script>
+		// This simple function returns object reference for elements by ID
+		function _(x){return document.getElementById(x);}
+		// Variables for bubble array, bubble index, and the setInterval() variable
+		var ba, bi=0, intrvl;
+		// bca - Bubble Content Array. Put your content here.
+		var bca = [
+		    '<h2>Heading News 1</h2><p>Content for news 1</p>',
+			'<h2>Heading news 2</h2><p>Content for news 2</p>',
+			'<h2>Heading news 3</h2><p>Content for news 3</p>',
+			'<h2>Heading news 4</h2><p>Content for news 4</p>'
+		];
+		// This function is triggered by the bubbleSlide() function below
+		function bubbles(bi){
+			// Fade-out the content
+			_("bubblecontent").style.opacity = 0;
+			// Loop over the bubbles and change all of their background color
+			for(var i=0; i < ba.length; i++){
+				ba[i].style.background = "rgba(0,0,0,.1)";
+			}
+			// Change the target bubble background to be darker than the rest
+			ba[bi].style.background = "#999";
+			// Stall the bubble and content changing for just 300ms
+			setTimeout(function(){
+				// Change the content
+				_("bubblecontent").innerHTML = bca[bi];
+				// Fade-in the content
+				_("bubblecontent").style.opacity = 1;
+			}, 300);
+		}
+		// This function is set to run every 5 seconds(5000ms)
+		function bubbleSlide(){
+			bi++; // Increment the bubble index number
+			// If bubble index number is equal to the amount of total bubbles
+			if(bi == ba.length){
+				bi = 0; // Reset the bubble index to 0 so it loops back at the beginning
+			}
+			// Make the bubbles() function above run
+			bubbles(bi);
+		}
+		// Start the application up when document is ready
+		window.addEventListener("load", function(){
+			// Get the bubbles array
+			ba = _("bubbles").children;
+			// Set the interval timing for the slideshow speed
+			intrvl = setInterval(bubbleSlide, 2000);
+		});
+	</script>
+
+	<body>
+		<div class="all">
+		<div class='all1'>
+		<div class='all2'>
+
+			<div class="banner"  >
+				<h1>SMAK ONE</h1>
+				<p></h2> add something in here</p></h2>
+			</div>
+
+
+			<div class="divider">
+			</div>
+
+			<div class="backnav">
+				<div class='nav'>
+				<ul>
+
+					<li><a href="#"> Home </li></a>
+					<li><a href="#"> About us </li></a>
+					<li><a href="#"> Events </li></a>
+					<li><a href="#"> Contact </li></a>
+				</ul>
+				</div>
+
+				<div class="searchform">
+					<form method="get" class="search">
+						<label name"search" >Search </label>
+						<input type="text" placeholder="search">
+						<input type="submit" value="search"/>
+					</form>
+				</div>
+			</div>
+
+			<div id="bubblebox">
+		  		<div id="bubbles">
+		   			 <div onclick="bubbles(0); clearInterval(intrvl);" style="background:#999;"></div>
+					    <div onclick="bubbles(1); clearInterval(intrvl);"></div>
+					    <div onclick="bubbles(2); clearInterval(intrvl);"></div>
+					    <div onclick="bubbles(3); clearInterval(intrvl);"></div>
+		 		 </div>
+		  		<div id="bubblecontent">
+				    <h2>Heading News 1</h2>
+				    <p>Content for news 1</p>
+		  		</div>
+			</div>
+
+			
+				<div class="maincontent">
+					<h1>This is the main content</h1>
+					<p>ha</p>
+				</div>
+
+				<aside class="1">
+					<h1>This is the sidebar</h1>
+				</aside>
+			</div>
+
+			<div class="foot">
+				<div class="footer">
+					<div class="footer1">
+						<h2>Address</h2>
+
+						<p>JL. Tanjung Duren Raya No. 4 </p>
+						Jakarta Barat, 11470, Indonesia ‎
+						<p>Telp : (021)5666965</p>
+					</div>
+
+					<div class="footer2">
+						<h2>Working Hours</h2>
+
+					<p>5 Days a week</p>
+					07:00 AM - 16:00 PM
+					<p>Hotline Service : (021) 5666965</p>
+
+					</div>
+				</div>
+			</div>
+
+	</div>
+	</div>
+	</div>
+
+	</body>
+</html>
